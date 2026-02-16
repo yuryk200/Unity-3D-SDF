@@ -1,7 +1,5 @@
 # ⚛️ Unity SDF 3D renderer | C#
 
-## 🔍 Overview
-
 This project contains the Unity-based 3D molecular renderer used in the ChemSolve mobile application.
 
 The renderer receives molecular data in SDF (Structure Data File) format from the Android client and reconstructs the molecular structure in real time using dynamically generated geometry.
@@ -84,6 +82,7 @@ You also need to modify this line in the gradle file in the Unity Launcher:
         noCompress = ['.unity3d', '.ress', '.resource', '.obb', '.bundle', '.bytes', '.dat', '.mp4', '.wav', '.ogg']
     }
 ```
+
 
 
 
