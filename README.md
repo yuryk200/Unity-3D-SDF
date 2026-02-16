@@ -70,7 +70,20 @@ For this to work, once you clone the repo you need to unzip the Library.zip fold
 
 For use in Unity you need to click on the main camera and change the field of view to 60.
 
-The dw object is for mobile use
+The dw is a GameObject made for the mobile application, this has the moleculeGeneration and rotate script attached to it to generate molecules from SDFs sent to mobiles.
+
+The dw(1) is a GameObject made for testing in Unity, it generates molecules from sdf ouput in Assest/sdf, so if you want view a different molecule you need to replace the sdf file in that folder. Otherwise if you intend to use this set-up for the mobile app delete dw(1) before exporting the project.
+
+The repo already has the settings saved to be able to export the build into a android build so nothing needs to be changed unless you need something more specific. To export the project into a android build you want to go to File > Build Settings > Export. Then once exported copy the Unity Launcher into your android app folder.
+
+You also need to modify this line in the gradle file in the Unity Launcher:
+
+```Bash
+    aaptOptions {
+        // Unity streaming assets must not be compressed
+        noCompress = ['.unity3d', '.ress', '.resource', '.obb', '.bundle', '.bytes', '.dat', '.mp4', '.wav', '.ogg']
+    }
+```
 
 
 
