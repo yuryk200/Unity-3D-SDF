@@ -74,7 +74,7 @@ The dw(1) is a GameObject made for testing in Unity, it generates molecules from
 
 The repo already has the settings saved to be able to export the build into a android build so nothing needs to be changed unless you need something more specific. To export the project into a android build you want to go to File > Build Settings > Export. Then once exported copy the Unity Launcher into your android app folder.
 
-You also need to modify this line in the gradle file in the Unity Launcher:
+You also need to modify this line in the gradle file in the Unity Launcher by changing it to this:
 
 ```Bash
     aaptOptions {
@@ -82,6 +82,7 @@ You also need to modify this line in the gradle file in the Unity Launcher:
         noCompress = ['.unity3d', '.ress', '.resource', '.obb', '.bundle', '.bytes', '.dat', '.mp4', '.wav', '.ogg']
     }
 ```
+
 
 
 
